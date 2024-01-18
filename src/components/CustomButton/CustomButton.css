@@ -1,0 +1,9 @@
+.custom-button{
+    color: blue;
+    background-color: pink;
+    margin: 10px 30px 10px 5px;
+    border: 0;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 8px;
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import CustomButton from './components/CustomButton/CustomButton';
+import Greeting from './components/Greeting/Greeting';
+import PhoneList from './components/PhoneList/PhoneList';
+import RedTitle from './components/RedTitle/RedTitle';
 
 function App() {
+  const youHitIt = () => {
+    alert("Le has dado");
+  }
+  const okMen = () => {
+    alert("Le has dado");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RedTitle text="Teléfonos:"></RedTitle>
+      <PhoneList></PhoneList>
+      <RedTitle text="Mensajes:"></RedTitle>
+      <Greeting name="Laura"></Greeting>
+      <Greeting name="Pablo"></Greeting>
+      <RedTitle text="Botones"></RedTitle>
+      <CustomButton handleClick={youHitIt} text="Dale!"></CustomButton>
+      <CustomButton handleClick={okMen} text="Ok"></CustomButton>
     </div>
   );
 }
